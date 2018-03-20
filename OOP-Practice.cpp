@@ -7,6 +7,10 @@ class Person {
         Person(string name1) {
             name = name1;
         }
+    
+        ~Person() {
+            cout << "Goodbye, " << name;   
+        }
         
         void setName(string newName) {
             name = newName;
@@ -22,6 +26,6 @@ class Person {
 int main() {
     Person me("Tom");
     me.setName("Jerry");
-    cout << me.getName();
+    cout << me.getName() << endl;
     return 0;
 }
